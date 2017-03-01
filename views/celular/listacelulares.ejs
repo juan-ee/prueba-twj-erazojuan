@@ -1,1 +1,34 @@
-<h1>LISTA DE CELULARES</h1>
+<div class="container">
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <th><h3>Nombre</h3></th>
+      <th><h3>Sistema Operativo</h3></th>
+      <th><h3>Version</h3></th>
+      <th><h3>Aplicaciones</h3></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% celulares.forEach((celular) => { %>
+    <tr>
+      <td><h4><%= celular.nombre %></h4></td>
+      <td><h4><%= celular.sistemaoperativo%></h4></td>
+      <td><h4><%= celular.version %></h4></td>
+      <td>
+        <a href="#" class="btn btn-sm btn-warning btn-block">Ver Aplicaciones</a>
+      </td>
+      <td>
+        <a href="#" class="btn btn-sm btn-primary btn-block">Editar</a>
+      </td>
+      <td>
+        <a href="celular/borrarCelular?id=<%= celular.id %>" class="btn btn-sm btn-danger btn-block">Borrar</a>
+      </td>
+    </tr>
+    <% }) %>
+    </tbody>
+  </table>
+</div>
+
+

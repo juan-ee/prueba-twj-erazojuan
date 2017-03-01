@@ -1,5 +1,5 @@
 <div class="container">
-<form>
+<form action="celular/crearCelular">
   <h1 align="center">REGISTRAR NUEVO CELULAR</h1>
   <div class="row">
     <div class="col-sm-3">
@@ -9,15 +9,15 @@
     <div class="col-sm-4">
       <div class="form-group">
         <label for="nomb">Nombre</label>
-        <input type="text" class="form-control" id="nomb" placeholder="Modelo del celular" required>
+        <input type="text" class="form-control" name="nombre" id="nomb" placeholder="Modelo del celular" required>
       </div>
       <div class="form-group">
         <label for="so">Sistema Operativo</label>
-        <input type="text" class="form-control" id="so" placeholder="Sistema Operativo" required>
+        <input type="text" class="form-control" name="sistemaoperativo" id="so" placeholder="Sistema Operativo" required>
       </div>
       <div class="form-group">
         <label for="version">Version</label>
-        <input type="number" class="form-control" id="version" placeholder="Version del SO" required>
+        <input type="number" class="form-control" name="version" id="version" placeholder="Version del SO" required>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block">Crear</button>

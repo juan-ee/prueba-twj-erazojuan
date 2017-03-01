@@ -4,6 +4,7 @@ module.exports = {
   attributes: {
     nombre:{
       type:'string',
+      unique:true
     },
     sistemaoperativo:{
       type:'string'

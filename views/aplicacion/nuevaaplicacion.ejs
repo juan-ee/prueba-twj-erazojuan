@@ -1,5 +1,5 @@
 <div class="container">
-  <form>
+  <form action="aplicacion/crearAplicacion">
     <h1 align="center">REGISTRAR NUEVA APLICACION</h1>
     <div class="row">
       <div class="col-sm-3">
@@ -9,16 +9,16 @@
       <div class="col-sm-4">
         <div class="form-group">
           <label for="nomb">Nombre</label>
-          <input type="text" class="form-control" id="nomb" placeholder="Nombre de la aplicacion" required>
+          <input type="text" class="form-control" name="nombre" id="nomb" placeholder="Nombre de la aplicacion" required>
         </div>
         <div class="form-group">
           <label for="version">Version</label>
-          <input type="number" class="form-control" id="version" placeholder="Version" required>
+          <input type="number" class="form-control" name="version" id="version" placeholder="Version" required>
         </div>
 
         <div class="form-group">
           <label for="tamanio">Tamaño(MB)</label>
-          <input type="number" class="form-control" min="1" id="tamanio" placeholder="Tamaño total" required>
+          <input type="number" class="form-control" name="tamanio" min="1" id="tamanio" placeholder="Tamaño total" required>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary btn-block">Crear</button>
