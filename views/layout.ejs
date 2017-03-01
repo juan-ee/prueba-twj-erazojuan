@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <title><%=typeof title == 'undefined' ? 'Prueba Javascript' : title%></title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
 
     <!--
         Stylesheets and Preprocessors
@@ -34,7 +35,31 @@
   </head>
 
   <body>
-    <%- body %>
+  <nav class="navbar navbar-inverse nav-bar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="sr-only">Desplegar/Ocultar</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Inicio</a>
+      </div>
+      <!--MENU-->
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+          <li><a href="/nuevocelular">Nuevo Celular</a></li>
+          <li><a href="/">Listar Celulares</a></li>
+          <li><a href="/nuevaaplicacion">Nueva Aplicacion</a></li>
+          <li><a href="/listaaplicaciones">Listar Aplicaciones</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <%- body %>
 
 
 
@@ -86,6 +111,8 @@
           + Use a different preprocessor, like TypeScript
 
     -->
+    <script src="bootstrap/js/jquery-3.1.1.min.js"> </script>
+    <script src="bootstrap/js/bootstrap.min.js"> </script>
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>

@@ -34,7 +34,11 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+  'get /nuevocelular':'RutaController.nuevoCelular',
+  'get /nuevaaplicacion':'RutaController.nuevaAplicacion',
+  'get /listacelulares':'RutaController.listarCelulares',
+  'get /listaaplicaciones':'RutaController.listarAplicaciones',
 
   /***************************************************************************
   *                                                                          *

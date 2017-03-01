@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <th><h3>Nombre</h3></th>
+      <th><h3>Version</h3></th>
+      <th><h3>Tamaño(MB)</h3></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% aplicaciones.forEach((aplicacion, i) => { %>
+    <tr>
+      <td><h4><%= aplicacion.nombre %></h4></td>
+      <td><h4><%= aplicacion.version %></h4></td>
+      <td><h4><%= aplicacion.tamanio %></h4></td>
+      <td>
+        <a href="#" class="btn btn-sm btn-primary btn-block">Editar</a>
+      </td>
+      <td>
+        <a href="#" class="btn btn-sm btn-danger btn-block">Borrar</a>
+      </td>
+    </tr>
+    <% }) %>
+    </tbody>
+  </table>
+</div>
