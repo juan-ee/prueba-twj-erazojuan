@@ -6,19 +6,19 @@
  */
 
 module.exports = {
-  borrarAplicacion:function(req,res){
+  borrarAplicacion:function(req,res){//BORRAR UNO APLICACION
     Aplicacion.destroy({id:req.param('id')})
       .exec(function (err,app_borrada) {
         if(err) return res.view('error',{descripcion:err,link:"/listaaplicaciones"});
         return res.redirect('/listaaplicaciones');
       });
   },
-  crearAplicacion:function(req,res){
+  crearAplicacion:function(req,res){//CREAR UNO APLICACION
     Aplicacion.findOne({nombre:req.param('nombre')}).exec(function (err,encontrado) {
       if(err){
         return res.view('error', {descripcion: err.message, link: "/nuevaaplicacion"});
       }else if(encontrado){
-        return res.view('error', {descripcion: "Ya existe una aplicacion con ese nombre", link: "/nuevaaplicacion"});
+        return res.redirect('/error?descripcion=Ya existe una aplicacion con ese nombre&link=/nuevaaplicacion');
       }else{
         Aplicacion.create(req.allParams())
           .exec(function (err,app_creada) {
@@ -35,7 +35,7 @@ module.exports = {
     });
 
   },
-  editarAplicacion:function(req,res){
+  editarAplicacion:function(req,res){//ACTUALIZAR UNO APLICACION
     Aplicacion.update({
       id: req.param('id')
     },req.allParams())

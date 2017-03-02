@@ -35,10 +35,17 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
-  'get /nuevocelular':'RutaController.nuevoCelular',
-  'get /nuevaaplicacion':'RutaController.nuevaAplicacion',
-  'get /listacelulares':'RutaController.listarCelulares',
+  'get /nuevocelular':'RutaController.nuevoCelular', //crearUNO celular
+  'get /editarcelular':'RutaController.editarCelular', //actualizarUNO celular
+  'get /listacelulares':'RutaController.listarCelulares',//listarTODOS celular
+
+  'get /nuevaaplicacion':'RutaController.nuevaAplicacion', //crearUNO aplicacion
+  'get /editaraplicacion':'RutaController.editarAplicacion', //actualizarUNO aplicacion
   'get /listaaplicaciones':'RutaController.listarAplicaciones',
+
+  //ERROR
+  'get /error':'RutaController.error',
+
 
   /***************************************************************************
   *                                                                          *

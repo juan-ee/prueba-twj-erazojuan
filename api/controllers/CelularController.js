@@ -6,8 +6,7 @@
  */
 
 module.exports = {
-  crearCelular:function(req,res,next){
-    //sails.log(req.allParams());
+  crearCelular:function(req,res,next){ //crearUNO celular
     Celular.findOne({nombre:req.param('nombre')}).exec(function (err,encontrado) {
       if(err){
         return res.view('error', {descripcion: err.message, link: "/nuevocelular"});
@@ -26,7 +25,7 @@ module.exports = {
     });
 
   },
-  editarCelular:function(req,res){
+  editarCelular:function(req,res){ //actualizar UNO
     Celular.update({
       id: req.param('id')
     },req.allParams())
@@ -37,7 +36,7 @@ module.exports = {
         return res.redirect('/listacelulares');
       });
   },
-  borrarCelular:function(req,res){
+  borrarCelular:function(req,res){//BORRAR UNO CELULAR
     Celular.destroy({id:req.param('id')})
       .exec(function (err,app_borrada) {
         if(err) return res.view('error',{descripcion:err,link:"/listacelulares"});
