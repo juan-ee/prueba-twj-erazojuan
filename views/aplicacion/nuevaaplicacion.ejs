@@ -24,7 +24,11 @@
           <button type="submit" class="btn btn-success btn-block">Crear</button>
         </div>
       </div>
-      <div class="col-sm-1"></div>
+      <div class="col-sm-1">
+        <%if(cel!=undefined){%>
+        <input type="hidden" name="cel" value="<%= cel %>">
+        <%}%>
+      </div>
       <div class="col-sm-3">
         <img src="images/aplicacion/apps.jpg" height="200" width="200" align="center" alt="">
       </div>

@@ -17,7 +17,7 @@
       <td><h4><%= celular.sistemaoperativo%></h4></td>
       <td><h4><%= celular.version %></h4></td>
       <td>
-        <a href="#" class="btn btn-sm btn-warning btn-block">Ver Aplicaciones</a>
+        <a href="ruta/verAplicacionesCelular?id=<%= celular.id %>" class="btn btn-sm btn-warning btn-block">Ver Aplicaciones</a>
       </td>
       <td>
         <a href="ruta/editarCelular?nombre=<%= celular.nombre %>&sistemaoperativo=<%= celular.sistemaoperativo %>&version=<%= celular.version %>&id=<%= celular.id %>" class="btn btn-sm btn-primary btn-block">Editar</a>

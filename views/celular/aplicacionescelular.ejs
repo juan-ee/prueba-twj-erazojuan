@@ -1,0 +1,60 @@
+<!--<%// var otras=aplicaciones.reduce((reducido,key)=>{ if(!b.includes(key)){reducido.push(key)}return reducido},[]); %>-->
+
+<div class="container">
+  <h1>Aplicaciones existentes en el <%= nombre %>:</h1>
+  <br/>
+  <a href="/nuevaAplicacion?cel=<%= id %>" class="btn btn-sm btn-success ">Añadir nueva aplicacion</a>
+  <%if(apps.length==0){%>
+  <h3 style="color: darkred" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 aplicaciones</h3>
+  <%}else{%>
+  <table class="table ">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Version</th>
+      <th>Tamaño(MB)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% apps.forEach((aplicacion, i) => { %>
+    <tr>
+      <td><%= aplicacion.nombre %></td>
+      <td><%= aplicacion.version %></td>
+      <td><%= aplicacion.tamanio %></td>
+      <td>
+        <a href="/celular/quitarAplicacion?id_app=<%= aplicacion.id %>&id_cel=<%= id %>" class="btn btn-sm btn-danger ">Quitar</a>
+      </td>
+    </tr>
+    <% }) %>
+    </tbody>
+  </table>
+  <%}%>
+</div>
+
+<%if(otras.length!=0){%>
+
+<div class="container">
+  <h1>Aplicaciones sin asignar:</h1>
+  <table class="table ">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Version</th>
+      <th>Tamaño(MB)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% otras.forEach((aplicacion, i) => { %>
+    <tr>
+      <td><%= aplicacion.nombre %></td>
+      <td><%= aplicacion.version %></td>
+      <td><%= aplicacion.tamanio %></td>
+      <td>
+        <a href="/celular/agregarAplicacion?id_app=<%= aplicacion.id %>&id_cel=<%= id %>" class="btn btn-sm btn-primary ">Agregar al celular</a>
+      </td>
+    </tr>
+    <% }) %>
+    </tbody>
+  </table>
+</div>
+<%}%>
